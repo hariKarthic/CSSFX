@@ -1,14 +1,15 @@
 body{
     margin:0;
     padding:0;
-    background-color: #ffffcb;
+    background:url('../assets/food.png') repeat #fff;
     font-family:"Open sans",Arial,sans-serif;
+
 
 }
 
 .panel{
-    border:1px solid #004056;
-    background-color:#2C858D;
+    background:#F1F68B !important;
+
     width:200px;
     height:200px;
     margin:0 auto;
@@ -21,9 +22,10 @@ body{
 
 }
 .header{
-    background-color: #004056;
+    background-color: #4B5C55;
+    border-bottom:3px solid #EB5847;
     padding:5px;
-    min-height:60px;
+    min-height:20px;
     position: fixed;
     top:0;
     z-index: 1000;
