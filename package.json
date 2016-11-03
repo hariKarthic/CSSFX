@@ -1,0 +1,19 @@
+{
+  "name": "cssfx",
+  "version": "0.0.1",
+  "description": "a collection of various css transistion and transforms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css3",
+    "csseffects",
+    "fx"
+  ],
+  "author": "HKM",
+  "license": "ISC",
+  "dependencies": {
+    "material-design-lite": "^1.2.1"
+  }
+}

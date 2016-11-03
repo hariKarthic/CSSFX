@@ -1,0 +1,248 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: #ffffcb;
+    font-family:"Open sans",Arial,sans-serif;
+
+}
+
+.panel{
+    border:1px solid #004056;
+    background-color:#2C858D;
+    width:200px;
+    height:200px;
+    margin:0 auto;
+    margin-bottom:100px;
+    position:relative;
+    padding:20px;
+    text-align:left;
+    color:#fff;
+    font-size:3rem;
+
+}
+.header{
+    background-color: #004056;
+    padding:5px;
+    min-height:60px;
+    position: fixed;
+    top:0;
+    z-index: 1000;
+    color:#fff;
+    width:100%;
+    margin:0 0 60px 0;
+
+}
+.content{
+
+    position: relative;
+    top:180px;
+}
+
+.duo{
+    position: relative;
+    margin:0 auto;
+    width:256px;
+}
+
+.duo_top{
+    position: absolute;
+    top:0;
+    z-index:500;
+
+}
+
+.duo_bottom{
+    position: absolute;
+    top:0;
+    z-index:300;
+}
+
+
+
+
+@keyframes animrollright {
+    0%{
+        transform:rotate(0deg);
+        left:0;
+        opacity:1;
+
+    }
+    100%{
+        transform:rotate(360deg);
+        left:400px;
+        opacity:0;
+    }
+}
+
+
+@keyframes animrollleft{
+    0%{
+        transform:rotate(0deg);
+        left:0;
+        opacity:1;
+    }
+
+    100%{
+        transform:rotate(-360deg);
+        left:-400px;
+        opacity:0;
+    }
+}
+.rollright:hover{
+    animation-name: animrollright;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+
+}
+.rollleft:hover{
+    animation-name: animrollleft;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes swiperrightanim {
+    0%{
+        opacity:1;
+        left:0;
+    }
+
+    100%{
+        opacity:0;
+        left:200px;
+    }
+}
+
+@keyframes swiperleftanim{
+
+    0%{
+        opacity:1;
+        left:0;
+    }
+
+    100%{
+        opacity:0;
+        left:-200px;
+    }
+
+}
+
+.swiperight:hover{
+    animation:swiperrightanim 1200ms alternate ease infinite;
+}
+
+.swipeleft:hover{
+    animation:swiperrightanim 1200ms alternate ease infinite;
+}
+@keyframes wobblesideanim {
+    10%, 90% {
+        transform: translate(-1px, 0);
+    }
+
+    20%, 80% {
+        transform: translate(2px, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate(-4px,  0);
+    }
+
+    40%, 60% {
+        transform: translate(4px,  0);
+    }
+}
+
+@keyframes wobbleupanim{
+    10%, 90% {
+        transform: translate(0,-1px);
+    }
+
+    20%, 80% {
+        transform: translate(0,2px);
+    }
+
+    30%, 50%, 70% {
+        transform: translate(0,-4px);
+    }
+
+    40%, 60% {
+        transform: translate(0,4px);
+    }
+}
+.wobbleside:hover{
+    animation-name:wobblesideanim;
+    animation-duration:1000ms;
+    animation-timing-function:cubic-bezier(.36,.07,.19,.97);
+    animation-direction:alternate;
+    animation-iteration-count: infinite;
+
+}
+
+.wobbleup:hover{
+
+    animation-name:wobbleupanim;
+    animation-duration:1000ms;
+    animation-timing-function:cubic-bezier(.36,.07,.19,.97);
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+
+}
+
+@keyframes lightsAnim{
+    10%{
+        background-color:#ff5040;
+    }
+    40%{
+        background-color: #0e23ff;
+    }
+    90%{
+        background-color: #11ff21;
+    }
+}
+
+.lights:hover{
+    animation-name:lightsAnim;
+    animation-duration:1000ms;
+    animation-delay: 200ms;
+    animation-timing-function:linear;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+}
+
+
+
+
+/*Styles for Material design cards*/
+.demo-card-event.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: #3E4EB8;
+}
+.demo-card-event > .mdl-card__actions {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+.demo-card-event > .mdl-card__title {
+    align-items: flex-start;
+}
+.demo-card-event > .mdl-card__title > h4 {
+    margin-top: 0;
+}
+.demo-card-event > .mdl-card__actions {
+    display: flex;
+    box-sizing:border-box;
+    align-items: center;
+}
+.demo-card-event > .mdl-card__actions > .material-icons {
+    padding-right: 10px;
+}
+.demo-card-event > .mdl-card__title,
+.demo-card-event > .mdl-card__actions,
+.demo-card-event > .mdl-card__actions > .mdl-button {
+    color: #fff;
+}
