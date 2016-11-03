@@ -3,13 +3,10 @@ body{
     padding:0;
     background:url('../assets/food.png') repeat #fff;
     font-family:"Open sans",Arial,sans-serif;
-
-
 }
 
 .panel{
     background:#F1F68B !important;
-
     width:200px;
     height:200px;
     margin:0 auto;

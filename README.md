@@ -5,6 +5,8 @@
 
 #### Version 
 * 0.0.1 Base version with miminal transition effects.
+* 1.0.0 Added images from [subtle-patterns](http://subtlepatterns.com/)
+        Changed color scheme.
 
 
 
