@@ -3,6 +3,7 @@ body{
     padding:0;
     background:url('../assets/food.png') repeat #fff;
     font-family:"Open sans",Arial,sans-serif;
+    font-size:16px;
 }
 
 .panel{
@@ -41,6 +42,9 @@ body{
     position: relative;
     margin:0 auto;
     width:256px;
+    height:256px;
+    display: flex;
+    flex-direction:column;
 }
 
 .duo_top{
@@ -56,6 +60,50 @@ body{
     z-index:300;
 }
 
+.text-effects{
+    text-align: center;
+    margin:20px 0px;
+    text-transform:uppercase;
+}
+
+.text-effects {
+    margin:36px 0;
+}
+
+ .live{
+    font-size:2.5em;
+    color: #d50000;
+    font-weight: bold;
+    position: relative;
+
+
+}
+
+.live:before{
+    content:"";
+    display:block;
+    border:1px solid #d50000;
+    background:#d50000;
+    width:10px;
+    height:10px;
+    position:relative;
+    top:10px;
+    left:30%;
+    animation-name:livepulse;
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes livepulse {
+    0%,100%{
+        border-radius:50%;
+    }
+
+    50%{
+        border-radius: 0;
+    }
+}
 
 
 
@@ -102,7 +150,7 @@ body{
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-duration: 1.5s;
-    animation-timing-function: ease-in;
+    animation-timing-function: linear;
 
 }
 
