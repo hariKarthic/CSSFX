@@ -4,7 +4,8 @@
   "description": "a collection of various css transistion and transforms",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"webpack --config webpack.config.js --color -p -progress"
   },
   "keywords": [
     "css3",
@@ -15,5 +16,14 @@
   "license": "ISC",
   "dependencies": {
     "material-design-lite": "^1.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "path": "^0.12.7",
+    "style-loader": "^0.13.1"
   }
 }
