@@ -4,10 +4,10 @@
 ###### Uses [material-design-lite](https://getmdl.io/) package for visuals.
 
 #### Version 
-* 0.0.1 Base version with minimal transition effects.
+* 0.0.1 Base version with some transition effects.
 * 1.0.0 Added images from [subtle-patterns](http://subtlepatterns.com/)
         Changed color scheme.
-*1.0.1 Added webpack.        
+* 1.0.1 Added webpack.        
         
 
 

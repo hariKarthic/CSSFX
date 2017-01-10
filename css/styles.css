@@ -1,141 +1,153 @@
-body{
-    margin:0;
-    padding:0;
-    background:url('../assets/food.png') repeat #fff;
-    font-family:"Open sans",Arial,sans-serif;
-    font-size:16px;
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../assets/food.png') repeat #fff;
+    font-family: "Open sans", Arial, sans-serif;
+    font-size: 16px;
 }
 
-.panel{
-    background:#F1F68B !important;
-    width:200px;
-    height:200px;
-    margin:0 auto;
-    margin-bottom:100px;
-    position:relative;
-    padding:20px;
-    text-align:left;
-    color:#fff;
-    font-size:3rem;
+.panel {
+    background: #F1F68B !important;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    position: relative;
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    font-size: 3rem;
 
 }
-.header{
+
+.header {
     background-color: #4B5C55;
-    border-bottom:3px solid #EB5847;
-    padding:5px;
-    min-height:20px;
+    border-bottom: 3px solid #EB5847;
+    padding: 5px;
+    min-height: 20px;
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 1000;
-    color:#fff;
-    width:100%;
-    margin:0 0 60px 0;
+    color: #fff;
+    width: 100%;
+    margin: 0 0 60px 0;
 
 }
-.content{
+
+.content {
 
     position: relative;
-    top:180px;
+    top: 180px;
 }
 
-.duo{
+.duo {
     position: relative;
-    margin:0 auto;
-    width:256px;
-    height:256px;
+    margin: 0 auto;
+    width: 256px;
+    height: 256px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
 }
 
-.duo_top{
+.duo_top {
     position: absolute;
-    top:0;
-    z-index:500;
+    top: 0;
+    z-index: 500;
 
 }
 
-.duo_bottom{
+.duo_bottom {
     position: absolute;
-    top:0;
-    z-index:300;
-}
-
-.text-effects{
-    text-align: center;
-    margin:20px 0px;
-    text-transform:uppercase;
+    top: 0;
+    z-index: 300;
 }
 
 .text-effects {
-    margin:36px 0;
+    text-align: center;
+    margin: 20px 0px;
+    text-transform: uppercase;
 }
 
- .live{
-    font-size:2.5em;
+.text-effects {
+    margin: 36px 0;
+}
+
+.live {
+    font-size: 2.5em;
     color: #d50000;
     font-weight: bold;
     position: relative;
-
+    margin-bottom: 10px;
 
 }
 
-.live:before{
-    content:"";
-    display:block;
-    border:1px solid #d50000;
-    background:#d50000;
-    width:10px;
-    height:10px;
-    position:relative;
-    top:10px;
-    left:30%;
-    animation-name:livepulse;
+.live.blink {
+    animation: liveblink 1200ms infinite linear;
+}
+
+.signal:before {
+    content: "";
+    display: inline-block;
+    border: 1px solid #d50000;
+    background: #d50000;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    animation-name: livepulse;
     animation-duration: 1200ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
 @keyframes livepulse {
-    0%,100%{
-        border-radius:50%;
+    0%, 100% {
+        border-radius: 50%;
     }
 
-    50%{
+    50% {
         border-radius: 0;
     }
 }
 
+@keyframes liveblink {
+    0% {
+        color: red;
+    }
 
+    100% {
+        color: green;
+    }
+}
 
 @keyframes animrollright {
-    0%{
-        transform:rotate(0deg);
-        left:0;
-        opacity:1;
+    0% {
+        transform: rotate(0deg);
+        left: 0;
+        opacity: 1;
 
     }
-    100%{
-        transform:rotate(360deg);
-        left:400px;
-        opacity:0;
+    100% {
+        transform: rotate(360deg);
+        left: 400px;
+        opacity: 0;
+    }
+}
+
+@keyframes animrollleft {
+    0% {
+        transform: rotate(0deg);
+        left: 0;
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-360deg);
+        left: -400px;
+        opacity: 0;
     }
 }
 
-
-@keyframes animrollleft{
-    0%{
-        transform:rotate(0deg);
-        left:0;
-        opacity:1;
-    }
-
-    100%{
-        transform:rotate(-360deg);
-        left:-400px;
-        opacity:0;
-    }
-}
-.rollright:hover{
+.rollright:hover {
     animation-name: animrollright;
     animation-delay: 200ms;
     animation-iteration-count: infinite;
@@ -144,7 +156,8 @@ body{
     animation-timing-function: ease-in;
 
 }
-.rollleft:hover{
+
+.rollleft:hover {
     animation-name: animrollleft;
     animation-delay: 200ms;
     animation-iteration-count: infinite;
@@ -155,38 +168,39 @@ body{
 }
 
 @keyframes swiperrightanim {
-    0%{
-        opacity:1;
-        left:0;
+    0% {
+        opacity: 1;
+        left: 0;
     }
 
-    100%{
-        opacity:0;
-        left:200px;
+    100% {
+        opacity: 0;
+        left: 200px;
     }
 }
 
-@keyframes swiperleftanim{
+@keyframes swiperleftanim {
 
-    0%{
-        opacity:1;
-        left:0;
+    0% {
+        opacity: 1;
+        left: 0;
     }
 
-    100%{
-        opacity:0;
-        left:-200px;
+    100% {
+        opacity: 0;
+        left: -200px;
     }
 
 }
 
-.swiperight:hover{
-    animation:swiperrightanim 1200ms alternate ease infinite;
+.swiperight:hover {
+    animation: swiperrightanim 1200ms alternate ease infinite;
 }
 
-.swipeleft:hover{
-    animation:swiperrightanim 1200ms alternate ease infinite;
+.swipeleft:hover {
+    animation: swiperrightanim 1200ms alternate ease infinite;
 }
+
 @keyframes wobblesideanim {
     10%, 90% {
         transform: translate(-1px, 0);
@@ -197,99 +211,68 @@ body{
     }
 
     30%, 50%, 70% {
-        transform: translate(-4px,  0);
+        transform: translate(-4px, 0);
     }
 
     40%, 60% {
-        transform: translate(4px,  0);
+        transform: translate(4px, 0);
     }
 }
 
-@keyframes wobbleupanim{
+@keyframes wobbleupanim {
     10%, 90% {
-        transform: translate(0,-1px);
+        transform: translate(0, -1px);
     }
 
     20%, 80% {
-        transform: translate(0,2px);
+        transform: translate(0, 2px);
     }
 
     30%, 50%, 70% {
-        transform: translate(0,-4px);
+        transform: translate(0, -4px);
     }
 
     40%, 60% {
-        transform: translate(0,4px);
+        transform: translate(0, 4px);
     }
 }
-.wobbleside:hover{
-    animation-name:wobblesideanim;
-    animation-duration:1000ms;
-    animation-timing-function:cubic-bezier(.36,.07,.19,.97);
-    animation-direction:alternate;
+
+.wobbleside:hover {
+    animation-name: wobblesideanim;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier(.36, .07, .19, .97);
+    animation-direction: alternate;
     animation-iteration-count: infinite;
 
 }
 
-.wobbleup:hover{
+.wobbleup:hover {
 
-    animation-name:wobbleupanim;
-    animation-duration:1000ms;
-    animation-timing-function:cubic-bezier(.36,.07,.19,.97);
-    animation-direction:alternate;
-    animation-iteration-count:infinite;
+    animation-name: wobbleupanim;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier(.36, .07, .19, .97);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 
 }
 
-@keyframes lightsAnim{
-    10%{
-        background-color:#ff5040;
+@keyframes lightsAnim {
+    10% {
+        background-color: #ff5040;
     }
-    40%{
+    40% {
         background-color: #0e23ff;
     }
-    90%{
+    90% {
         background-color: #11ff21;
     }
 }
 
-.lights:hover{
-    animation-name:lightsAnim;
-    animation-duration:1000ms;
+.lights:hover {
+    animation-name: lightsAnim;
+    animation-duration: 1000ms;
     animation-delay: 200ms;
-    animation-timing-function:linear;
-    animation-direction:alternate;
-    animation-iteration-count:infinite;
-}
-
-
-
-
-/*Styles for Material design cards*/
-.demo-card-event.mdl-card {
-    width: 256px;
-    height: 256px;
-    background: #3E4EB8;
-}
-.demo-card-event > .mdl-card__actions {
-    border-color: rgba(255, 255, 255, 0.2);
-}
-.demo-card-event > .mdl-card__title {
-    align-items: flex-start;
-}
-.demo-card-event > .mdl-card__title > h4 {
-    margin-top: 0;
-}
-.demo-card-event > .mdl-card__actions {
-    display: flex;
-    box-sizing:border-box;
-    align-items: center;
-}
-.demo-card-event > .mdl-card__actions > .material-icons {
-    padding-right: 10px;
-}
-.demo-card-event > .mdl-card__title,
-.demo-card-event > .mdl-card__actions,
-.demo-card-event > .mdl-card__actions > .mdl-button {
-    color: #fff;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
