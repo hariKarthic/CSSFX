@@ -6,38 +6,60 @@ body {
     font-size: 16px;
 }
 
-.panel {
-    background: #F1F68B !important;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    position: relative;
-    padding: 20px;
-    text-align: left;
-    color: #fff;
-    font-size: 3rem;
+/**Common Styles**/
+.card-effects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.demo-card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    cursor: pointer;
+    margin: 20px 0;
+    height: 150px;
+    background-color: crimson;
+    border: 1px solid red;
+    color: #000;
+    background-attachment: fixed;
+    -webkit-box-shadow: 2px 2px 2px #777;
+    -moz-box-shadow: 2px 2px 2px #777;
+    box-shadow: 2px 2px 2px #777;
+}
+
+.card-wrap{
+    min-width:150px;
+    min-height:150px;
+    margin: 20px 0;
 }
 
 .header {
     background-color: #4B5C55;
-    border-bottom: 3px solid #EB5847;
-    padding: 5px;
+    border-bottom: 2px solid #EB5847;
+    padding: 15px;
     min-height: 20px;
-    position: fixed;
-    top: 0;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
     z-index: 1000;
     color: #fff;
     width: 100%;
-    margin: 0 0 60px 0;
+}
 
+.header > p {
+    margin: 5px 0;
 }
 
 .content {
-
     position: relative;
-    top: 180px;
+    top: 60px;
 }
 
 .duo {
@@ -139,34 +161,34 @@ body {
 
 .rollright:hover {
     animation-name: animrollright;
-    animation-delay: 200ms;
-    animation-iteration-count: 2;
+    animation-delay: 100ms;
+    animation-iteration-count: 1;
     animation-direction: alternate;
-    animation-duration: 1s;
+    animation-duration: 1200ms;
     animation-timing-function: ease-in;
 
 }
 
 .rollleft:hover {
     animation-name: animrollleft;
-    animation-delay: 200ms;
+    animation-delay: 100ms;
     animation-iteration-count: 2;
     animation-direction: alternate;
-    animation-duration: 1.5s;
-    animation-timing-function: linear;
+    animation-duration: 1200ms;
+    animation-timing-function: ease-in;
 
 }
 
-@keyframes swiperrightanim {
-    0% {
-        opacity: 1;
-        left: 0;
-    }
+/**
+* Swiping animations
+* */
 
-    100% {
-        opacity: 0;
-        left: 200px;
-    }
+.swiperight:hover {
+    animation: swiperrightanim 1000ms normal ease-out 1;
+}
+
+.swipeleft:hover {
+    animation: swiperleftanim 1000ms normal ease-out 1;
 }
 
 @keyframes swiperleftanim {
@@ -183,12 +205,39 @@ body {
 
 }
 
-.swiperight:hover {
-    animation: swiperrightanim 1200ms alternate ease infinite;
+@keyframes swiperrightanim {
+    0% {
+        opacity: 1;
+        left: 0;
+    }
+
+    100% {
+        opacity: 0;
+        left: 200px;
+    }
 }
 
-.swipeleft:hover {
-    animation: swiperrightanim 1200ms alternate ease infinite;
+/**
+* Wobbling... Wobbling !
+*/
+
+.wobbleside:hover {
+    animation-name: wobblesideanim;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier(.36, .07, .19, .97);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+.wobbleup:hover {
+
+    animation-name: wobbleupanim;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier(.36, .07, .19, .97);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
 }
 
 @keyframes wobblesideanim {
@@ -227,23 +276,17 @@ body {
     }
 }
 
-.wobbleside:hover {
-    animation-name: wobblesideanim;
+/**
+Lights
+* */
+
+.lights:hover {
+    animation-name: lightsAnim;
     animation-duration: 1000ms;
-    animation-timing-function: cubic-bezier(.36, .07, .19, .97);
+    animation-delay: 200ms;
+    animation-timing-function: linear;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-
-}
-
-.wobbleup:hover {
-
-    animation-name: wobbleupanim;
-    animation-duration: 1000ms;
-    animation-timing-function: cubic-bezier(.36, .07, .19, .97);
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-
 }
 
 @keyframes lightsAnim {
@@ -258,46 +301,28 @@ body {
     }
 }
 
-.lights:hover {
-    animation-name: lightsAnim;
-    animation-duration: 1000ms;
-    animation-delay: 200ms;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+/*Pushing Down*/
+
+.pushdown:hover {
+    width:10px;
+    height:10px;
+    transform-origin:center center;
+    transition-duration:1s;
+    transition-property:width , height;
+
+
 }
 
-/*Styles for Material design cards*/
-.demo-card-event.mdl-card {
-    width: 256px;
-    height: 256px;
-    background: #3E4EB8;
+@keyframes pushdownAnim {
+    0% {
+        width: 150px;
+        height:150px;
+        opacity: 1
+    }
+    100% {
+        width: 10px;
+        height:10px;
+        opacity: 0;
+    }
 }
 
-.demo-card-event > .mdl-card__actions {
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.demo-card-event > .mdl-card__title {
-    align-items: flex-start;
-}
-
-.demo-card-event > .mdl-card__title > h4 {
-    margin-top: 0;
-}
-
-.demo-card-event > .mdl-card__actions {
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-}
-
-.demo-card-event > .mdl-card__actions > .material-icons {
-    padding-right: 10px;
-}
-
-.demo-card-event > .mdl-card__title,
-.demo-card-event > .mdl-card__actions,
-.demo-card-event > .mdl-card__actions > .mdl-button {
-    color: #fff;
-}

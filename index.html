@@ -6,135 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Card - CSS Animation</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/normalise.css"/>
     <link rel="stylesheet" href="./css/styles.css">
 
 </head>
 <body>
 <section class="container-fluid">
-    <h2 class="text-center header"></h2>
-
-    <div class="content">
-
-        <div class="demo-card-event mdl-card mdl-shadow--2dp panel rollright">
-            <div class="mdl-card__title mdl-card--expand">
-                <h4>
-                    Roll<br>Right
-                </h4>
+    <header class="header text-center">
+        <p class=" ">2D</p>
+    </header>
+    <main class="content">
+        <div class="card-effects">
+            <div class="demo-card rollright">
+                <p>Roll Right</p>
             </div>
-            <div class="mdl-card__actions mdl-card--border">
 
-                <i class="material-icons">cached</i>
+            <div class="demo-card rollleft">
+                <p>Roll Left</p>
             </div>
-        </div>
 
-        <div class="demo-card-event mdl-card mdl-shadow--2dp panel rollleft">
-            <div class="mdl-card__title mdl-card--expand">
-                <h4>
-                    Roll<br>Left
-                </h4>
+            <div class="demo-card swiperight">
+                <p>Swipe Right</p>
             </div>
-            <div class="mdl-card__actions mdl-card--border">
 
-                <i class="material-icons">cached</i>
+            <div class="demo-card swipeleft">
+                <p>Swiper Left</p>
             </div>
-        </div>
 
-        <div class="demo-card-event mdl-card mdl-shadow--2dp panel swiperight">
-            <div class="mdl-card__title mdl-card--expand">
-                <h4>
-                    Swiper<br>Right </h4>
+
+            <div class="demo-card wobbleup">
+                <p>Wiggle</p>
             </div>
-            <div class="mdl-card__actions mdl-card--border">
 
-                <i class="material-icons">cached</i>
+            <div class="demo-card wobbleside">
+                <p>Wiggle!</p>
             </div>
-        </div>
 
-        <div class="demo-card-event mdl-card mdl-shadow--2dp panel swipeleft">
-            <div class="mdl-card__title mdl-card--expand">
-                <h4>Swipe<br>Left
-                </h4>
+            <div class="demo-card lights">
+                <p>Groovy</p>
             </div>
-            <div class="mdl-card__actions mdl-card--border">
 
-                <i class="material-icons">cached</i>
-            </div>
-        </div>
-
-        <div class="demo-card-event mdl-card mdl-shadow--2dp panel wobbleside">
-            <div class="mdl-card__title mdl-card--expand">
-                <h4>
-                    *wiggle*<br>*wiggle*
-                </h4>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-
-                <i class="material-icons">cached</i>
-            </div>
-        </div>
-
-        <div class="demo-card-event mdl-card mdl-shadow--2dp panel wobbleup">
-            <div class="mdl-card__title mdl-card--expand">
-                <h4>
-                    *wiggle*<br>*wiggle*
-                </h4>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-
-                <i class="material-icons">cached</i>
-            </div>
-        </div>
-
-        <div class="demo-card-event mdl-card mdl-shadow--2dp panel lights">
-            <div class="mdl-card__title mdl-card--expand">
-                <h4>
-                    Groovy
-                </h4>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-
-                <i class="material-icons">cached</i>
-            </div>
-        </div>
-
-        <div class="duo">
-            <div class="demo-card-event mdl-card mdl-shadow--2dp panel swiperight duo_top">
-                <div class="mdl-card__title mdl-card--expand">
-                    <h4>
-                        Swiper<br>Right
-                    </h4>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-
-                    <i class="material-icons">cached</i>
+            <div class="card-wrap">
+                <div class="demo-card pushdown">
                 </div>
             </div>
 
-            <div class="demo-card-event mdl-card mdl-shadow--2dp panel duo_bottom">
-                <div class="mdl-card__title mdl-card--expand">
-                    <h4>
-                        HA!
-                    </h4>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-
-                    <i class="material-icons">cached</i>
-                </div>
-            </div>
         </div>
-
-
+    </main>
+    <header class="header text-center">
+        <p class=" ">2D</p>
+    </header>
+    <main>
         <section class="text-effects">
             <div class="live strobe">Live</div>
-
-            <div class="gradient">Live</div>
+            <div class="live ">Live</div>
         </section>
+    </main>
 
 
-    </div>
 </section>
-<script src="./node_modules/material-design-lite/material.min.js"></script>
 </body>
 </html>
