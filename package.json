@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean &&webpack --config webpack.config.js --color -p -progress",
-    "clean": "rimraf ./build"
+    "build": "webpack --config webpack.config.js --color -p -progress",
+    "start": "node index.js"
   },
   "keywords": [
     "css3",
@@ -29,6 +29,7 @@
     "image-loader": "0.0.1",
     "image-webpack-loader": "^3.1.0",
     "path": "^0.12.7",
-    "style-loader": "^0.13.1"
+    "style-loader": "^0.13.1",
+    "webpack": "^3.5.5"
   }
 }
