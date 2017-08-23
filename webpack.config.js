@@ -8,32 +8,40 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: {
-        app: ["./index.js"]
+    devtools: 'cheap-eval-source-map',
+    entry: path.join(__dirname, "/js/index.js"),
+    output: {
+        path: path.join(__dirname, '/build/'),
+        filename: "bundle.js"
+
     },
-    output:{
-        path:path.join(__dirname,'/build/'),
-        fileName:"bundle.js"
-    },
-    plugins:[
+    plugins: [
         new ExtractTextPlugin('bundle.css')
     ],
-    module:{
-        loaders:[
+    module: {
+        loaders: [
             {
-            test:/\.js$/,
-            exclude:/node_modules/,
-            loader:'babel',
-            query: {
-                presets: ['es2015']
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015']
                 }
             },
             {
-                test:/\.css$/,
-                loader: ExtractTextPlugin.extract('style-loader','css-loader?sourceMap'),
-                exclude:/node_modules/
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap'),
+                exclude: /node_modules/
 
+            },
+
+            {
+                test: /\.(jpg|png|gif)$/,
+                loaders: [
+                    'file-loader',
+                    'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}',
+                ]
             }
-            ]
+        ]
     }
 };
